@@ -34,13 +34,15 @@
     </div>
 </nav>
 
-
+{% if success %}   
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <strong>Hello</strong>form submitted : {{success}}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>    
+<strong>Success:</strong>Your task has been added to the list 
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+</button>
+</div>  
+{% endif %}  
+
 <div class="container my-3">
     <h2 class="text-center">Welcome to ToDos list - Add a task</h2>
     <form action="/" method = "post">
